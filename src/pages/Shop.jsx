@@ -1,13 +1,18 @@
 import React from "react";
 
 export default function Shop() {
+  function togglesearch() {
+    console.log("toggle  called");
+    document.getElementById("searchToggle").classList.toggle("active");
+    console.log(document.getElementById("searchToggle").classList);
+  }
   return (
     <div class="site-wrap">
       <div class="site-navbar py-2">
-        <div class="search-wrap">
+        <div class="search-wrap" id="searchToggle">
           <div class="container">
             <a href="#" class="search-close js-search-close">
-              <span class="icon-close2"></span>
+              <span onClick={togglesearch} className="icon-close2"></span>
             </a>
             <form action="#" method="post">
               <input
@@ -80,9 +85,9 @@ export default function Shop() {
                 </ul>
               </nav>
             </div>
-            <div class="icons">
+            <div className="icons">
               <a href="#" class="icons-btn d-inline-block js-search-open">
-                <span class="icon-search"></span>
+                <span onClick={togglesearch} className="icon-search"></span>
               </a>
               <a href="cart.html" class="icons-btn d-inline-block bag">
                 <span class="icon-shopping-bag"></span>
@@ -337,7 +342,7 @@ export default function Shop() {
 
       <div
         class="site-section bg-secondary bg-image"
-        style="background-image: url('images/bg_2.jpg');"
+        style={{ backgroundImage: "url('images/bg_2.jpg')" }}
       >
         <div class="container">
           <div class="row align-items-stretch">
@@ -345,7 +350,7 @@ export default function Shop() {
               <a
                 href="#"
                 class="banner-1 h-100 d-flex"
-                style="background-image: url('images/bg_1.jpg');"
+                style={{ backgroundImage: "url('images/bg_1.jpg')" }}
               >
                 <div class="banner-1-inner align-self-center">
                   <h2>Pharma Products</h2>
@@ -360,7 +365,7 @@ export default function Shop() {
               <a
                 href="#"
                 class="banner-1 h-100 d-flex"
-                style="background-image: url('images/bg_2.jpg');"
+                style={{ backgroundImage: "url('images/bg_2.jpg')" }}
               >
                 <div class="banner-1-inner ml-auto  align-self-center">
                   <h2>Rated by Experts</h2>

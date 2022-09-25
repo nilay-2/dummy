@@ -12,7 +12,6 @@ export default function Home() {
     document.getElementById("searchToggle").classList.toggle("active");
     console.log(document.getElementById("searchToggle").classList);
   }
-
   return (
     <div className="site-wrap">
       <div className="site-navbar py-2">
